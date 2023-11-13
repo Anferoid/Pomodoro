@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./icon.png">
+
+</head>
+<body>
+    <div class="container">
+        <div class="timer">
+            <div class="pomodoros--durations">
+                <div id="duration--pomodoro" class="background pomodoros pomomodoro--duration">
+                    <label for="/">pomodoro</label>
+                </div>
+                <div id="duration--short" class="pomodoros short--break--duration">
+                    <label for="/">short break</label>
+                </div>
+                <div id="duration--long" class="pomodoros long--break--duration">
+                    <label for="/">long break</label>
+                </div>
+            </div>
+            <div class="pomodoro" id="time">
+                
+            </div>
+            <div class="pomodoro--actions">
+                <button id="pomodoro--start" class="background btn btn--primary">
+                    <span id="play-icon">start</span>
+                    <span class="hidden" id="pause-icon">pause</span>
+                </button>
+                <button id="pomodoro--reset" class="btn btn--stop">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+                <button id="pomodoro--settings" class="btn btn--settings">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+        </div>
+        <div class="pomodoro--configure" id="pomodoro--configuration">
+            <div id="btn--close" class="header--input">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="pomodoro--inputs">
+                <div class="input pomodoro--input">
+                    <label for="/">Pomodoro</label>
+                    <input id="input--pomodoro" type="number" value="25" min="0" maxlength="2" inputmode="numeric">
+                </div>
+                <div class="input input--short">
+                    <label for="/">Short Break</label>
+                    <input id="input--short" type="number" value="5" min="0" maxlength="2" inputmode="numeric">
+                </div>
+                <div class="input input--long">
+                    <label for="/">Long Break</label>
+                    <input id="input--long" type="number" value="10" min="0" maxlength="2" inputmode="numeric">
+                </div>
+            </div>
+            <div class="save--configurations">
+                <button id="save--configuration" class="btn--configure configure--save">Save Changes</button>
+                <button id="reset--configurations" class="btn--configure configure--reset">Reset all</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/0d185d8754.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
