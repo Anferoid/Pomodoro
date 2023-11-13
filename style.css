@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+    font-size: 10px;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right, 
+        #414345, 
+        #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right, 
+        #414345, 
+        #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.timer {
+    width: 550px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoros--durations {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoros {
+    margin: 0 auto;
+    border: 1px solid #fff;
+    padding: 0.7rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.pomodoros:hover {
+    background-color: #fff;
+    color: #18191a;
+    transition: 0.3s all ease;
+}
+
+.pomodoros label{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.pomodoro {
+    font-size: 14rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pomodoro--actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    font-size: 3.5rem;
+    color: #fff;
+    margin: 0 15px 0 0;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+.btn--primary {
+    font-size: 2.7rem;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.btn #play-icon{
+    padding: 2rem 3.5rem;
+}
+
+.btn #pause-icon{
+    padding: 1.8rem 2.8rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.background {
+    background-color: #fff;
+    color: #18191a;
+    transition: 0.3s all ease;
+}
+
+
+
+/* Pomodoro Inputs Section */
+
+.pomodoro--configure {
+    justify-content: center;
+    align-items: center;
+    background-color: #232526;
+    padding: 0.5rem 0.5rem;
+    border-radius: 20px;
+    position: absolute;
+    width: 50%;
+    transition: all 0.5s ease;
+    top: -300px;
+}
+
+.highlight {
+    transition: all 0.5s ease;
+    top: 200px;
+}
+
+.header--input {
+    width: 100%;
+    align-items: end;
+    justify-content: end;
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+#btn--close {
+    margin-left: 95%;
+    color: #93999c;
+    cursor: pointer;
+}
+
+.pomodoro--inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 7rem 0.5rem 10rem;
+    height: 80px;
+}
+
+.input label {
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.input input {
+    border-radius: 5px;
+    height: 3rem;
+    width: 10rem;
+    background-color: #232526;
+    border: 1px solid #93999c;
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.save--configurations {
+    padding: 0.5rem 19% 0rem 0;
+    margin-bottom: 5rem;
+}
+
+.btn--configure {
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #93999c;
+    margin: 0 auto;
+    justify-content: end;
+    align-items: end;
+    text-align: right;
+    float: right;
+}
+
+.configure--reset {
+    color: #ca0000;
+    background-color: transparent;
+    border: 1px solid #ca0000;
+}
+
+.configure--save {
+    background-color: #18191a;
+    border: 1px solid #13191a;
+    margin-left: 1rem;
+}
+
+
+@media screen and (max-width: 760px) {
+    .timer {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .pomodoros {
+        margin: 0 auto;
+        padding: 0.4rem 0.9rem;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+    .pomodoros label{
+        font-size: 1.6rem;
+    }
+    .pomodoro {
+        font-size: 10rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .pomodoro--configure {
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem 0.3rem 1rem 2rem;
+        border-radius: 20px;
+        position: absolute;
+        width: 80%;
+        transition: all 0.5s ease;
+        top: -400px;
+    }
+    .highlight {
+        transition: all 0.5s ease;
+        top: 130px;
+    }
+    #btn--close {
+        margin-left: 90%;
+    }
+    .pomodoro--inputs {
+        justify-content: center;
+        align-items: center;
+        display: block;
+        margin: 0;
+        height: 180px;
+    }
+    .input {
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .input label {
+        font-size: 1.7rem;
+        text-align: center;
+        margin: 10px;
+        position: absolute;
+    }
+    .input input {
+        border-radius: 5px;
+        text-align: center;
+        height: 3rem;
+        width: 10rem;
+        font-size: 1.8rem;
+        margin: 30px 0 0 0;
+    }
+    .save--configurations {
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .btn--configure {
+        padding: 0.4rem 1.7rem;
+        font-size: 1.7rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .configure--save {
+        margin: 0 13px 5px 0;
+    }
+    
+    .configure--reset {
+        margin: 5px 30px 5px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .timer {
+        width: 80%;
+        margin: -80px 0 0 0;
+    }
+    .pomodoros--durations {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .pomodoros--durations div {
+        margin: 10px 0 0 0;
+    } 
+    .pomodoros {
+        padding: 0.4rem 0.9rem;
+        width: 150px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .pomodoros label{
+        font-size: 1.6rem;
+    }
+    .pomodoro {
+        font-size: 8rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    .pomodoro--actions {
+        width: 50%;
+        margin: 0 auto;
+        padding: 30px 0 0 0;
+    }
+}
+
